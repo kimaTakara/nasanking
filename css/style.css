@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+/* -----------------------
+  fonts/color
+  ------------------------ */
+.kaisei-fonts-large {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kaisei-fonts-small {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-fonts {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* クリーム & ブラウン */
+body.theme-1 {
+  --theme-bg: #fef8e8;
+  --theme-text: #5b4636;
+}
+
+/* ミントグリーン & ダークブラウン */
+body.theme-2 {
+  --theme-bg: #d5ebe1;
+  --theme-text: #3c2f2f;
+}
+
+/* ラベンダーグレー & ダークチャコール */
+body.theme-3 {
+  --theme-bg: #e2dfea;
+  --theme-text: #333333;
+}
+
+/* ペールピンク & セピア */
+body.theme-4 {
+  --theme-bg: #fce8e6;
+  --theme-text: #5a3e36;
+}
+
+/* ウォームベージュ & オリーブグリーン ← 現在はこれ！  */
+body.theme-5 {
+  --theme-bg: #f3e5d0;
+  --theme-text: #556b2f;
+}
+
+/* ------------------------
+  common
+  ------------------------ */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 400px;
+
+  --bg-color: var(--theme-bg);
+  --text-color: var(--theme-text);
+}
+
+/* ------------------------ 
+  header
+  ------------------------ */
+.header {
+  text-align: center;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+.logo-small {
+  font-size: 1rem;
+}
+
+/* ------------------------ 
+  introduction
+  ------------------------ */
+.introduction {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.introduction-text h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.introduction-text p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* -----------------------
+  online-shop
+  ------------------------ */
+.online-shop {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.online-shop-title {
+  font-size: 2rem;
+}
+
+.goods {
+  display: flex;
+  gap: 1rem;
+}
+
+.goods img {
+  width: calc((100% - 1rem) / 2);
+}
+.goods-title {
+  font-size: 1.5rem;
+}
+
+/* -----------------------
+  footer
+  ------------------------ */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ------------------------
+   media
+  ------------------------ */
+@media (min-width: 768px) {
+  body {
+    max-width: 1000px;
+  }
+
+  /* ------------------------
+    header
+    ------------------------ */
+  .header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo-small {
+    align-self: flex-end;
+    font-size: 1.5rem;
+  }
+
+  /* -------------------------
+    introduction
+    ------------------------- */
+  .introduction {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .introduction-img {
+    flex: 1;
+  }
+
+  .introduction-text {
+    flex: 1;
+  }
+}
