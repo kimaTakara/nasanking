@@ -70,7 +70,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   max-width: 400px;
 
   --bg-color: var(--theme-bg);
@@ -102,7 +102,6 @@ body {
   gap: 0.5rem;
 }
 
-
 .greeting-text {
   .greeting-title {
     font-size: 2rem;
@@ -124,17 +123,21 @@ body {
 .introduction {
   margin-top: 2rem;
 
-  .introduction-title{
+  .introduction-title {
     font-size: 2rem;
     text-align: center;
   }
-  .introduction-img {
+  .introduction-imgs {
     margin-top: 2rem;
 
-    img+img {
+    .introduction-image + .introduction-image {
       margin-top: 1rem;
     }
   }
+}
+
+.pc-text {
+  display: none;
 }
 
 /* -----------------------
@@ -215,19 +218,30 @@ footer {
   /* ------------------------ 
   introduction
   ------------------------ */
-  .introduction-img {
+  .introduction-imgs {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 
+    .introduction-image {
+      width: calc((100% - 6rem) / 4);
+    }
+
     img {
-      width: calc((100% - 2rem) / 2);
+      width: 100%;
       height: auto;
       object-fit: cover;
     }
 
-    img+img {
+    .introduction-image + .introduction-image {
       margin-top: 0;
     }
+
+    
   }
+  .pc-text {
+      display: block;
+      margin-top: 1rem;
+      text-align: center;
+    }
 }

@@ -10,6 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- lightboxのCSS -->
+    <link rel="stylesheet" href="css/lightbox.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>なーさんは王様</title>
   </head>
@@ -43,12 +46,29 @@
 
       <section class="introduction">
         <h2 class="introduction-title kaisei-fonts-large">作品紹介</h2>
-        <div class="introduction-img">
-          <img src="img/January.jpg" alt="1月" />
-          <img src="img/February-cut.jpg" alt="2月" />
-          <img src="img/may.jpg" alt="5月" />
-          <img src="img/June.jpg" alt="6月" />
+        <div class="introduction-imgs">
+          <div class="introduction-image">
+            <a href="img/January.jpg" data-lightbox="January"
+              ><img src="img/January.jpg" alt="1月"
+            /></a>
+          </div>
+          <div class="introduction-image">
+            <a href="img/February-cut.jpg" data-lightbox="February"
+              ><img src="img/February-cut.jpg" alt="2月"
+            /></a>
+          </div>
+          <div class="introduction-image">
+            <a href="img/may.jpg" data-lightbox="may"
+              ><img src="img/may.jpg" alt="5月"
+            /></a>
+          </div>
+          <div class="introduction-image">
+            <a href="img/June.jpg" data-lightbox="june"
+              ><img src="img/June.jpg" alt="6月"
+            /></a>
+          </div>
         </div>
+        <p class="pc-text noto-fonts">※絵をクリックすると拡大します</p>
       </section>
 
       <section class="online-shop">
@@ -68,5 +88,6 @@
     <footer>
       <small>&copy;2025 なーさんは王様</small>
     </footer>
+    <script src="js/lightbox-plus-jquery.js"></script>
   </body>
 </html>
