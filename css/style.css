@@ -225,12 +225,19 @@ footer {
 
     .introduction-image {
       width: calc((100% - 6rem) / 4);
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
     }
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
+      display: block;
+    }
+
+    .bottom-crop img {
+      object-position: bottom;
     }
 
     .introduction-image + .introduction-image {
