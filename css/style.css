@@ -121,14 +121,14 @@ body {
   ------------------------ */
 
 .introduction {
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   .introduction-title {
     font-size: 2rem;
     text-align: center;
   }
   .introduction-imgs {
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     .introduction-image + .introduction-image {
       margin-top: 1rem;
