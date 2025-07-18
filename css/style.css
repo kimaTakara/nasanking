@@ -93,25 +93,48 @@ body {
 }
 
 /* ------------------------ 
-  introduction
+  greeting
   ------------------------ */
-.introduction {
+.greeting-section {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.introduction-text h2 {
-  font-size: 2rem;
-  text-align: center;
+
+.greeting-text {
+  .greeting-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .greeting-content {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+  }
 }
 
-.introduction-text p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  text-align: left;
-  line-height: 1.6;
+/* ------------------------ 
+  introduction
+  ------------------------ */
+
+.introduction {
+  margin-top: 2rem;
+
+  .introduction-title{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .introduction-img {
+    margin-top: 2rem;
+
+    img+img {
+      margin-top: 1rem;
+    }
+  }
 }
 
 /* -----------------------
@@ -172,20 +195,39 @@ footer {
   }
 
   /* -------------------------
-    introduction
+    greeting
     ------------------------- */
-  .introduction {
+  .greeting-section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
   }
 
-  .introduction-img {
+  .greeting-img {
     flex: 1;
   }
 
-  .introduction-text {
+  .greeting-text {
     flex: 1;
+  }
+
+  /* ------------------------ 
+  introduction
+  ------------------------ */
+  .introduction-img {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    img {
+      width: calc((100% - 2rem) / 2);
+      height: auto;
+      object-fit: cover;
+    }
+
+    img+img {
+      margin-top: 0;
+    }
   }
 }
