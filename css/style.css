@@ -67,21 +67,21 @@ img {
 }
 
 body {
-  background-color: rgba(var(--bg-color));
-  color: rgba(var(--text-color));
+  /* 変数定義をここに集約します */
+  --bg-color: var(--theme-bg);
+  --text-color: var(--theme-text);
+
+  /* 背景画像があるので background-color は実質見えませんが、フォールバックとして設定 */
+  background-color: rgb(var(--bg-color));
+  color: rgb(var(--text-color));
   margin: 0 auto;
   padding: 1rem;
   max-width: 600px;
 
-  /* --- ここから追記 --- */
   background-image: url(../img/cherryBlossom.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* スクロールしても背景を固定 */
-  /* --- ここまで追-記 --- */
-
-  --bg-color: var(--theme-bg);
-  --text-color: var(--theme-text);
 }
 
 /* メインコンテンツの背景を半透明にする */
@@ -90,15 +90,12 @@ footer {
   background-color: rgba(
     var(--bg-color),
     0.8
-  ); /* 半透明のウォームベージュに変更 */
+  ); 
   padding: 1.5rem; /* パディングを少し広げました */
   border-radius: 8px;
   backdrop-filter: blur(3px); /* 背景をぼかす */
   -webkit-backdrop-filter: blur(3px); /* Safari用の設定 */
   margin-top: 1rem; /* mainとfooterの間のスペース */
-
-  --bg-color: var(--theme-bg);
-  --text-color: var(--theme-text);
 }
 
 /* ------------------------ 
@@ -110,13 +107,9 @@ footer {
   background-color: rgba(var(--bg-color), 0.5);
   padding: 1rem;
   border-radius: 8px;
-  /* ヘッダーの文字色をダークブラウンに変更 */
-  color: rgba(var(--text-color));
+  color: rgb(var(--text-color));
   /* 文字に白い影をつけ、読みやすくする */
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
-
-  --bg-color: var(--theme-bg);
-  --text-color: var(--theme-text);
 }
 
 .logo {
@@ -209,6 +202,22 @@ footer {
   margin-top: 3rem;
   text-align: center;
 }
+
+/* -----------------------
+  footer-btns
+  ------------------------ */
+.btns {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+
 
 /* ------------------------
    media
