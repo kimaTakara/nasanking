@@ -53,6 +53,36 @@ body.theme-5 {
   --theme-text: 85, 107, 47;
 }
 
+/* ソフトイエロー & チャコールグレー */
+body.theme-6 {
+  --theme-bg: 255, 250, 205;
+  --theme-text: 47, 79, 79;
+}
+
+/* パウダーブルー & ネイビー */
+body.theme-7 {
+  --theme-bg: 224, 238, 238;
+  --theme-text: 25, 25, 112;
+}
+
+/* コーラルピンク & ダークレッド */
+body.theme-8 {
+  --theme-bg: 255, 240, 245;
+  --theme-text: 139, 0, 0;
+}
+
+/* セージグリーン & ダークグリーン */
+body.theme-9 {
+  --theme-bg: 240, 248, 240;
+  --theme-text: 0, 100, 0;
+}
+
+/* ライトグレー & ブラック */
+body.theme-10 {
+  --theme-bg: 245, 245, 245;
+  --theme-text: 40, 40, 40;
+}
+
 /* ------------------------
   common
   ------------------------ */
@@ -211,6 +241,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap; /* ボタンが折り返すようにする */
 }
 
 .btn {
