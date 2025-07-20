@@ -25,35 +25,33 @@
 
 /* クリーム & ブラウン */
 body.theme-1 {
-  --theme-bg: #fef8e8;
-  --theme-text: #5b4636;
+  --theme-bg: 254, 248, 232;
+  --theme-text: 91, 70, 54;
 }
 
 /* ミントグリーン & ダークブラウン */
 body.theme-2 {
-  --theme-bg: #d5ebe1;
-  --theme-text: #3c2f2f;
+  --theme-bg: 213, 235, 225;
+  --theme-text: 60, 47, 47;
 }
 
 /* ラベンダーグレー & ダークチャコール */
 body.theme-3 {
-  --theme-bg: #e2dfea;
-  --theme-text: #333333;
+  --theme-bg: 226, 223, 234;
+  --theme-text: 51, 51, 51;
 }
 
 /* ペールピンク & セピア */
 body.theme-4 {
-  --theme-bg: #fce8e6;
-  --theme-text: #5a3e36;
+  --theme-bg: 252, 232, 230;
+  --theme-text: 90, 62, 54;
 }
 
 /* ウォームベージュ & オリーブグリーン ← 現在はこれ！  */
 body.theme-5 {
-  --theme-bg: #f3e5d0;
-  --theme-text: #556b2f;
+  --theme-bg: 243, 229, 208;
+  --theme-text: 85, 107, 47;
 }
-
-
 
 /* ------------------------
   common
@@ -69,13 +67,13 @@ img {
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: rgba(var(--bg-color));
+  color: rgba(var(--text-color));
   margin: 0 auto;
   padding: 1rem;
   max-width: 600px;
 
-    /* --- ここから追記 --- */
+  /* --- ここから追記 --- */
   background-image: url(../img/cherryBlossom.jpg);
   background-size: cover;
   background-position: center;
@@ -87,13 +85,20 @@ body {
 }
 
 /* メインコンテンツの背景を半透明にする */
-main, footer {
-  background-color: rgba(243, 229, 208, 0.8); /* 半透明のウォームベージュに変更 */
+main,
+footer {
+  background-color: rgba(
+    var(--bg-color),
+    0.8
+  ); /* 半透明のウォームベージュに変更 */
   padding: 1.5rem; /* パディングを少し広げました */
   border-radius: 8px;
   backdrop-filter: blur(3px); /* 背景をぼかす */
   -webkit-backdrop-filter: blur(3px); /* Safari用の設定 */
   margin-top: 1rem; /* mainとfooterの間のスペース */
+
+  --bg-color: var(--theme-bg);
+  --text-color: var(--theme-text);
 }
 
 /* ------------------------ 
@@ -102,15 +107,17 @@ main, footer {
 .header {
   text-align: center;
   /* ヘッダーにも少し背景効果を適用 */
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(var(--bg-color), 0.5);
   padding: 1rem;
   border-radius: 8px;
   /* ヘッダーの文字色をダークブラウンに変更 */
-  color: #3c2f2f; 
+  color: rgba(var(--text-color));
   /* 文字に白い影をつけ、読みやすくする */
-  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7); 
-}
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
 
+  --bg-color: var(--theme-bg);
+  --text-color: var(--theme-text);
+}
 
 .logo {
   font-size: 2.2rem;
@@ -272,12 +279,10 @@ footer {
     .introduction-image + .introduction-image {
       margin-top: 0;
     }
-
-    
   }
   .pc-text {
-      display: block;
-      margin-top: 1rem;
-      text-align: center;
-    }
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+  }
 }
