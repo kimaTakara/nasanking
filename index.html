@@ -19,14 +19,14 @@
 
   <!-- BGとCOLORはbodyのクラス属性で切り替える -->
   <body class="theme-5">
-    <header class="header">
+    <header class="header fade-in-target">
       <h1 class="logo kaisei-fonts-large">なーさんは王様</h1>
       <span class="logo-small kaisei-fonts-small">
         ～王様、今日のご機嫌は？
       </span>
     </header>
 
-    <main>
+    <main class="fade-in-target">
       <section class="greeting-section">
         <div class="greeting-img">
           <img
@@ -97,7 +97,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="fade-in-target">
       <small>&copy;2025 なーさんは王様</small>
       <div class="btns">
         <div class="btn btn-1">[1]</div>
@@ -113,33 +113,7 @@
       </div>
     </footer>
     <script src="js/lightbox-plus-jquery.js"></script>
-    <script>
-      // DOMが完全に読み込まれてからスクリプトを実行
-      document.addEventListener("DOMContentLoaded", () => {
-        // テーマ切り替えボタンをすべて取得
-        const themeButtons = document.querySelectorAll(".btns .btn");
-        const body = document.body;
-
-        themeButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            // 既存のtheme-クラスをすべて削除
-            // bodyのクラスリストをループして 'theme-' で始まるクラスを削除します
-            body.classList.forEach((className) => {
-              if (className.startsWith("theme-")) {
-                body.classList.remove(className);
-              }
-            });
-
-            // クリックされたボタンのクラス名からテーマ番号を取得 (例: "btn-2" -> "2")
-            const themeNumber = button.className.match(/btn-(\d)/)[1];
-
-            // 新しいテーマクラスを追加 (例: "theme-2")
-            body.classList.add("theme-" + themeNumber);
-          });
-        });
-      });
-    </script>
-
+    <script src="js/main.js"></script>
     <!-- 
   Lightbox2 by Lokesh Dhakar
   https://lokeshdhakar.com/projects/lightbox2/

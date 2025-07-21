@@ -117,10 +117,7 @@ body {
 /* メインコンテンツの背景を半透明にする */
 main,
 footer {
-  background-color: rgba(
-    var(--bg-color),
-    0.8
-  ); 
+  background-color: rgba(var(--bg-color), 0.8);
   padding: 1.5rem; /* パディングを少し広げました */
   border-radius: 8px;
   backdrop-filter: blur(3px); /* 背景をぼかす */
@@ -248,7 +245,18 @@ footer {
   cursor: pointer;
 }
 
-
+/* -----------------------
+  fade-in-style
+  ------------------------ */
+/* 読み込み時のフェードイン用スタイル */
+.fade-in-target {
+  opacity: 0;
+  /* 1.5秒かけて表示*/
+  transition: opacity 1.5s ease-in-out;
+}
+.fade-in-target.is-visible {
+  opacity: 1;
+}
 
 /* ------------------------
    media
