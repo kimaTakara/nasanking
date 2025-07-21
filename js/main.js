@@ -7,17 +7,19 @@
   window.addEventListener("load", () => {
     // 1秒後 (壁紙表示)
     setTimeout(() => {
-      // ヘッダーを1秒かけて表示
+      // ヘッダーを3秒かけて表示
       document.querySelector(".header").classList.add("is-visible");
-    }, 1000); // 1000ミリ秒 = 1秒
+    }, 1000);
 
-    // 4秒後 (ヘッダー表示完了+1.5秒後)
+    // 3秒はCSSで
+
+    // 4秒後 (ヘッダー表示完了後)
     setTimeout(() => {
       // メインコンテンツとフッターを1秒かけて表示
       document.querySelectorAll("main, footer").forEach((el) => {
         el.classList.add("is-visible");
       });
-    }, 4000); // 2000ミリ秒 = 3秒
+    }, 4000);
   });
 }
 

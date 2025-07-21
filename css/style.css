@@ -131,7 +131,7 @@ footer {
 .header {
   text-align: center;
   /* ヘッダーにも少し背景効果を適用 */
-  background-color: rgba(var(--bg-color), 0.5);
+  background-color: rgba(var(--bg-color), 0.7);
   padding: 1rem;
   border-radius: 8px;
   color: rgb(var(--text-color));
@@ -252,7 +252,7 @@ footer {
 .fade-in-target {
   opacity: 0;
   /* 1.5秒かけて表示*/
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 3s ease-in-out;
 }
 .fade-in-target.is-visible {
   opacity: 1;
