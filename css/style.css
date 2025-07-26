@@ -125,6 +125,25 @@ footer {
   margin-top: 1rem; /* mainとfooterの間のスペース */
 }
 
+/* -----------------------
+  fade-in-style
+  ------------------------ */
+/* 読み込み時のフェードイン用スタイル */
+.fade-in-target {
+  opacity: 0;
+  /* 1.5秒かけて表示*/
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-target.is-visible {
+  opacity: 1;
+}
+
+/* テスト用 */
+/* .fade-in-target {
+  opacity: 1;
+} */
+
 /* ------------------------ 
   header
   ------------------------ */
@@ -215,11 +234,17 @@ footer {
   gap: 1rem;
 }
 
-.goods img {
-  width: calc((100% - 1rem) / 2);
-}
 .goods-title {
   font-size: 1.5rem;
+}
+
+.shirt {
+  width: calc((100% - 1rem) / 2);
+}
+
+/* lightboxの2枚目 */
+.online-shop .no-show {
+  display: none;
 }
 
 /* -----------------------
@@ -243,19 +268,6 @@ footer {
 
 .btn {
   cursor: pointer;
-}
-
-/* -----------------------
-  fade-in-style
-  ------------------------ */
-/* 読み込み時のフェードイン用スタイル */
-.fade-in-target {
-  opacity: 0;
-  /* 1.5秒かけて表示*/
-  transition: opacity 3s ease-in-out;
-}
-.fade-in-target.is-visible {
-  opacity: 1;
 }
 
 /* ------------------------
